@@ -21,4 +21,5 @@ to get the API simply just head to this website : https://openrouter.ai/deepseek
 Get your own API and paste it in the input form
 
 # Note 
-The AI API IS A FREE ONE WHICH ARENT THE BEST TO SCRAPS AND CONTROLLED WITH A SIMPLY PROMPT
+The AI API IS A FREE ONE WHICH ARENT THE BEST TO SCRAPS AND MAY HAVE A SLOW RESPON
+This are my Example for the Scraps Prompt ("scrap this web : "https://www.ebay.com/sch/i.html?_from=R40&_nkw=nike&_sacat=0&rt=nc&_pgn=1" with a name,price and description shows up")
