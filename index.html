@@ -73,6 +73,7 @@
     <div id="output"></div>
   </div>
 
+  
   <script>
     async function sendPrompt() {
       const prompt = document.getElementById("promptInput").value;
@@ -84,19 +85,25 @@
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "Authorization": "YOUR_API_KEY"
+            "Authorization": "Bearer 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"
           },
           body: JSON.stringify({
-            model: "deepseek/deepseek-r1-0528",
+            model: "deepseek/deepseek-r1-0528:free",
             messages: [{
               role: "user",
-              content: `Generate a list of 3 products in JSON format. Each product must have 'name', 'description', and 'price'. Prompt: ${prompt}`
+              content: `${prompt}`
             }],
             temperature: 0.7
           })
         });
 
         const data = await response.json();
+
+        // Check if the API response has the expected structure
+        if (!data.choices || !data.choices.length) {
+          throw new Error("Unexpected API response format: " + JSON.stringify(data));
+        }
+
         const content = data.choices[0].message.content;
 
         let jsonData;
@@ -110,6 +117,11 @@
           } else {
             throw new Error("Response was not valid JSON.");
           }
+        }
+
+        // Check if jsonData is an array
+        if (!Array.isArray(jsonData)) {
+          throw new Error("Expected JSON array but got: " + typeof jsonData);
         }
 
         outputDiv.innerHTML = '';
