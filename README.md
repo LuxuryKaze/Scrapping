@@ -15,6 +15,7 @@ If any field (e.g., product price or description) does not have a value, return 
 
 
 # How to use The File
+Copy the Try / Index.HTML file and paste to your Visual Studio Code, and open with live server the index/try.html (Must have installed Live server plugin)
 The Index.HTML are using sk API which will doesnt work if you try to copy,
 im making a new one that called (Try.HTML) to people can test it so,
 to get the API simply just head to this website : https://openrouter.ai/deepseek/deepseek-r1-0528-qwen3-8b:free/api ( Log in Required )
