@@ -12,3 +12,6 @@ Make AI can extract at least the product name, product price, and product descri
 You can visit each product's detail page and retrieve the product description provided by the seller inside the nested product detail page.
 Scrape all products across pagination.
 If any field (e.g., product price or description) does not have a value, return '-'
+
+
+# How to use The File
